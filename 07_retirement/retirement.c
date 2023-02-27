@@ -16,12 +16,11 @@ void retirement (int startAge, double initial, retire_info working, retire_info 
     int ageMonths = startAge%12;
 
     for(int i = 0; i < working.months + retired.months; i++){
-        printf("Age %3d month %2d you have $%.2lf\n", ageYear, ageMonths, balance);
         if(ageMonths==12){
             ageYear++;
             ageMonths =0;
         }
-
+ printf("Age %3d month %2d you have $%.2lf\n", ageYear, ageMonths, balance);
         if(i<working.months){
             balance = balance + balance*(working.rate_of_return/12)+working.contribution;
         }
