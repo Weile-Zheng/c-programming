@@ -6,9 +6,9 @@ typedef struct _retire_info{
     double contribution; 
     double rate_of_return; 
 
-} retire_info;
+} _retire_info;
 
-void retirement (int startAge, double initial, retire_info working, retire_info retired){
+void retirement (int startAge, double initial, _retire_info working, _retire_info retired){
     double balance = initial; 
     int ageYear = startAge/12;
     int ageMonths = startAge%12;
@@ -32,8 +32,8 @@ void retirement (int startAge, double initial, retire_info working, retire_info 
 
 
 int main(){
-    retire_info working;
-    retire_info retired;
+    _retire_info working;
+    _retire_info retired;
     working.months = 489;
     working.contribution = 1000;
     working.rate_of_return = 0.045;
